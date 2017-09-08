@@ -1,0 +1,50 @@
+package com.fis.adversarial.cryptography;
+
+public interface GlobalConstants {
+	public static final long seed = 12345;
+	public static final int nChannels = 1;
+	public static final int outputNum = 10;
+	public static final int batchSize = 64; // Test batch size
+	public static final int nEpochs = 1; // Number of training epochs
+	public static final int iterations = 1; // Number of training iterations
+	public static final float learningRate = 0.01F;
+	public static final boolean useRegularization = true;
+	public static final double L2 = 0.0005;
+	public static final int[] convLayerkernelSize = new int[] { 5, 5 };
+	public static final int[] stride = new int[] { 1, 1 };
+	public static final String FIRST_CONVOLUTION_LAYER = "FIRST_CONV_LAYER";
+	public static final String SECOND_CONVOLUTION_LAYER = "SECOND_CONV_LAYER";
+	public static final String FIRST_POOLING_LAYER = "FIRST_POOLING_LAYER";
+	public static final String SECOND_POOLING_LAYER = "SECOND_POOLING_LAYER";
+	public static final String HIDDEN_LAYER = "HIDDEN_LAYER";
+	public static final String FC_OUTPUT_LAYER = "FC_OUTPUT_LAYER";
+	public static final int FIRST_CONVOLUTION_OUT_DEPTH = 20;
+	public static final int SECOND_CONVOLUTION_OUT_DEPTH = 50;
+	public static final int[] poolLayerkernelSize = new int[] { 2, 2 };
+	public static final int[] poolLayerStride = new int[] { 2, 2 };
+	public static final int HIDDEN_LAYER_OUT_DEPTH = 500;
+	public static final int height = 28;
+	public static final int width = 28;
+	public static final int depth = 1;
+	public static final String CONVEYOR = "CONVEYOR";
+	public static final String RECEIVER = "RECEIVER";
+	public static final String EAVESDROPPER = "EAVESDROPPER";
+	public static final int nExamples = 24012;
+	public static final int nLabels = 24012;
+	public static final String conveyorTrainingData = "datasets/conveyor-train.data";
+	public static final String conveyorLabelData = "datasets/conveyor-label.data";
+	public static final String delimiter = "  ";
+	//public static final int batchSize = 60;
+	public static final int rows = 28;
+	public static final int columns = 28;
+	public static final int nOutcome = 10;
+	public static final int nReceiverNNOutcome = 36;
+	public static final int nEavesdropperNNOutcome = 36;
+	public static final String conveyorModelPath = "models/conveyor-trained-model.bin";
+	public static final String receiverTrainingData = "datasets/receiver-train.data";
+	public static final String receiverLabelData = "datasets/receiver-label.data";
+	public static final String receiverModelPath = "models/receiver-trained-model.bin";
+	public static final String eavesdropperTrainingData = "datasets/eavesdropper-train.data";
+	public static final String eavesdropperLabelData = "datasets/eavesdropper-label.data";
+	public static final String eavesdropperModelPath = "models/eavesdropper-trained-model.bin";
+}
